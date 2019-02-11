@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard1.1</TargetFramework>
+		<AssemblyName>XamarinMaps</AssemblyName>
+		<PackageId>XamarinMaps</PackageId>
+		<NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Xam.Plugin.Geolocator" Version="4.0.1" />
+	  <PackageReference Include="Xamarin.Forms" Version="2.4.0.266-pre1" />
+	  <PackageReference Include="Xamarin.Forms.Maps" Version="2.4.0.266-pre1" />
+	</ItemGroup>
+
+</Project>
