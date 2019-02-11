@@ -18,9 +18,10 @@ namespace XamarinMaps
 		public MainViewModel()
 		{
 
-			PinCollection.Add(new Pin() { Position = MyPosition, Type = PinType.Generic, Label = "I'm a Pin" });
+			//PinCollection.Add(new Pin() { Position = MyPosition, Type = PinType.Generic, Label = "I'm a Pin" });
+            PinCollection.Add(new Pin() { Position = new Position(40.409264, 49.867092), Type = PinType.Generic, Label = "Baku Pin" });
 
-			Task.Run(async () =>
+            Task.Run(async () =>
 			{
 				var position = await Plugin.Geolocator.CrossGeolocator.Current.GetPositionAsync();
 				MyPosition = new Position(position.Latitude, position.Longitude);
@@ -32,7 +33,7 @@ namespace XamarinMaps
 		private ObservableCollection<Pin> _pinCollection = new ObservableCollection<Pin>();
 		public ObservableCollection<Pin> PinCollection { get { return _pinCollection; } set { _pinCollection = value; OnPropertyChanged(); } }
 
-		private Position _myPosition = new Position(-37.8141, 144.9633);
+		private Position _myPosition = new Position(40.409264, 49.867092); // Baku
 		public Position MyPosition { get { return _myPosition; } set { _myPosition = value; OnPropertyChanged(); } }
 
 	}
